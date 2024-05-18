@@ -1,0 +1,382 @@
+:root {
+  flex: 1;
+  --bg: #282c34;
+  --header: #fff;
+  --link: #61dafb;
+  --text: hsla(0, 0%, 100%, 0.88);
+}
+/* Set a minimum height for the content area */
+
+
+
+/* navbar */
+.navbar {
+  padding: 1rem; /* Padding around navbar */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Use system font stack */
+}
+
+.navbar ul {
+  display: flex; /* Display links in a row */
+  justify-content: center; /* Center align links */
+  list-style: none; /* Remove default list styles */
+}
+
+.navbar li {
+  margin-right: 1rem; /* Add space between navbar items */
+}
+
+.navbar a {
+  color: #8e081c; /* Dark pink text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5rem 1rem; /* Padding inside buttons */
+  border-radius: 0.25rem; /* Round corners of buttons */
+  background-color: transparent; /* Transparent background for buttons */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  font-size: 1.2rem; /* Font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+.navbar a:hover {
+  background-color: #cc112d; /* Light pink background color on hover */
+  color: #fff; /* White text color on hover */
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.left,
+.right {
+  flex: 1;
+  text-align: center;
+}
+.left {
+  text-align: center;
+  margin-right: -85px; /* Adjust the negative margin to bring the containers closer */
+}
+.right {
+  max-width: 600px;
+  max-height: 300px;
+  color: rgb(95, 1, 32);
+  font-size: .9rem;
+  flex: 1;
+  text-align: center;
+  margin-left: -100px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(153, 25, 46, 0.5);
+}
+
+
+
+.img-container:hover {
+  box-shadow: 0 15px 30px rgba(208, 83, 83, 0.9); /* Even more intense shadow on hover */
+}
+
+.img-container img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Responsive layout for tablets and small desktops */
+@media (min-width: 768px) {
+  .home-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 1024px) {
+  .home-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+  }
+}
+
+/* home css  */
+.header {
+  color: #560101;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-left: -550px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  margin-top: -60px;
+
+
+}
+
+.icon-container img {
+  width: 80px; /* Set the width of each icon */
+  margin: 10px; /* Add some spacing around each icon */
+}.img-container {
+  width: 400px; /* Set the width of the image container to 100% */
+  height: 500px; /* Set the height of the image container */
+  border-radius: 20px; /* Make the image container round */
+  overflow: hidden; /* Hide overflowing content */
+  margin: 0 auto; /* Center the image container */
+  /* box-shadow: 0 10px 20px rgba(235, 58, 58, 0.8); Intense pink shadow */
+}
+
+
+/* Footer.css */
+
+/* Footer.css */
+
+.footer {
+  margin-left:-20px;
+  height: 100px;
+  margin-bottom: -100px;
+  left: 0;
+  width: 1275px;
+  background-color:#560101;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.copyright {
+  margin-top: 70px;
+}
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: -60px;
+}
+
+
+
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Make the card round */
+  padding: 10px 15px; /* Adjust padding for a shorter card */
+  margin-bottom: 10px; /* Decrease margin between cards */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack items vertically */
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  box-shadow: 0 4px 8px #901717; /* Light red shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+
+}
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+  }
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px #961b1b; /* Intense red shadow on hover */
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 5px; /* Reduce space between title and content */
+  color: #d31616; /* Red color for headers */
+  text-align: center;
+}
+
+.project-card p {
+  
+  margin: 0 auto; /* Center the cards on the page */
+ 
+  
+  color: #333; /* Darken the text color for better readability */
+  text-align: center; /* Left-align the text for a more traditional reading flow */
+  font-size: 16px; /* Adjust the font size for better readability */
+  line-height: 1.5; /* Increase the line height for better spacing between lines */
+}
+
+.project-card ul {
+  margin-top: 10px; /* Add some space above the list */
+  padding-left: 20px; /* Indent the list items */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #ffffff; /* White background */
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.close {
+  color: #ff0000; /* Red color for close button */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.project-list {
+  margin-top: 20px;
+}
+
+.project-list h2 {
+  margin-top: 0;
+  color: #ff0000; /* Red color for section headers */
+}
+
+.projects {
+  
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
+}
+
+.projects h1 {
+  margin-top: 0;
+  color: #ff0000; /* Red color for main headers */
+}
+
+/* Custom Modal Styles */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.custom-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ff0000; /* Red color for close button */
+}
+
+video {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+}
+.github-link {
+  display: block; /* Display as block to take full width */
+  margin-top: 10px; /* Add some space between the description and the link */
+  color: #ff0000; /* GitHub link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold font weight */
+  text-align: center;
+}
+
+.github-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.open-video-button {
+  padding: 5px 10px; /* Adjust padding to make the button shorter */
+  font-size: 14px; 
+  width: 100px;
+  margin-left: 245px;
+  margin-top: 10px;
+  color: white; /* Dark pink text color */
+  background-color: #8e081c; /* Dark pink background color on hover */ /* Transparent background for buttons */
+  border: 1px solid #8e081c; /* Dark pink border */
+  border-radius: 0.25rem; /* Round corners of buttons */
+  padding: 0.5rem 1rem; /* Padding inside buttons */
+  /* font-size: 1.2rem; Font size */
+  font-weight: bold; /* Bold font weight */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.open-video-button:hover {
+  background-color: white; /* Light pink background color on hover */
+  color: #8e081c; /* White text color on hover */
+}
+/* Resume.css */
+.resume-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.resume-header {
+  color: #8e0813; /* Dark text color */
+  font-size: 24px; /* Larger font size */
+  margin-bottom: 20px; /* Add some space below the header */
+}
+
+.resume-image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  border-radius: 10px; /* Rounded corners for the image */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+.resume-button {
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  background-color:#8e081c; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.resume-button:hover {
+  background-color: #e41130; /* Light pink background color on hover */
+  color:white; /* White text color on hover */
+}
