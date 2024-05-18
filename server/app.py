@@ -1,7 +1,7 @@
 from flask import request
 from flask_restful import Resource, Api
 from config import app, db, api
-from models import Project
+from models import User, Project, Portfolio
 from flask import render_template
 
 
