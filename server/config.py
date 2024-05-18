@@ -66,7 +66,7 @@ CORS(app)
 
 # Ensure the Flask server hands over handling to React Router for undefined routes
 @app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
+@app.route('/<path:paath>')
 def serve(path):
     if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
         return send_from_directory(app.static_folder, path)
@@ -74,4 +74,4 @@ def serve(path):
         return send_from_directory(app.template_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5555)  # Use host='0.0.0.0' to make server available on your network
+   app.run(host='0.0.0.0', port=5000)  # Change port to 5000  # Use host='0.0.0.0' to make server available on your network

@@ -26,7 +26,7 @@ class Projects(Resource):
 api.add_resource(Projects, '/projects')
 
 if __name__ == '__main__':
-    app.run(port=5555, debug=True)
+    app.run(port=5000, debug=True)
 @app.route('/<int:id>')
 def index_with_id(id):
     return render_template("index.html", id=id)
