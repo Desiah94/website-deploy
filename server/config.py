@@ -56,7 +56,7 @@ app = Flask(__name__,
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 print("Database URI:", os.getenv('DATABASE_URI'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'super-secret')  # Fallback to 'super-secret' if not set
+app.json.compact = False
 
 db = SQLAlchemy(app)
 api = Api(app)
